@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--跟标签beans，里面配置一个又一个的bean子标签，每一个bean子标签都代表一个类的配置-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop
+        https://www.springframework.org/schema/aop/spring-aop.xsd
+">
+    <!-- 注解扫描   -->
+    <context:component-scan base-package="com.lagou.edu"/>
+
+    <!-- 外部资源文件引入-->
+    <context:property-placeholder location="classpath:jdbc.properties"/>
+
+
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="driverClassName" value="${jdbc.driver}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+    </bean>
+
+    <!--  横切逻辑bean  -->
+<!--    <bean id="logUtils" class="com.lagou.edu.utils.LogUtils"></bean>-->
+
+    <!--  进行aop相关配置  -->
+    <!-- config表示开始aop配置，内部配置切面aspect   -->
+    <!--  aspect = 切入点 + 方位点 + 横切逻辑  -->
+<!--    <aop:config>-->
+<!--        <aop:aspect id="logAspect" ref="logUtils">-->
+<!--            &lt;!&ndash;  切入点锁定我们感兴趣的方法，在expression中使用aspectj语法表达式&ndash;&gt;-->
+<!--&lt;!&ndash;            <aop:pointcut id="pt1" expression="execution(public void com.lagou.edu.service.impl.TransferServiceImpl.transfer(String,String,int))"/>&ndash;&gt;-->
+<!--            &lt;!&ndash;       (..)表示里面的参数可有可无，(*)表示必定有值， *..*表示中间省略n个*     &ndash;&gt;-->
+<!--            <aop:pointcut id="pt1" expression="execution(* *..*.*(..))"/>-->
+<!--            &lt;!&ndash;   方位点以及被spring封装好分别是before，after。。。 &ndash;&gt;-->
+<!--            &lt;!&ndash;   before 前置增强  &ndash;&gt;-->
+<!--&lt;!&ndash;            <aop:before method="beforeMethod" pointcut-ref="pt1"/>&ndash;&gt;-->
+<!--            &lt;!&ndash;  after后置增强，无论如何都会执行  &ndash;&gt;-->
+<!--            &lt;!&ndash;  after-returning正常执行  &ndash;&gt;-->
+<!--&lt;!&ndash;            <aop:after-returning method="successMethod" returning="retVal" pointcut-ref="pt1"/>&ndash;&gt;-->
+<!--            &lt;!&ndash;  after-throwing 异常通知  &ndash;&gt;-->
+<!--            <aop:around method="arroundMethod" pointcut-ref="pt1"/>-->
+
+<!--        </aop:aspect>-->
+<!--    </aop:config>-->
+
+<!--  开启aop注解驱动  -->
+<!--  在config和aspectj-autoproxy中有一个proxy-target-class的属性如果是true就会强制使用cglib动态代理，但没有必要去做  -->
+<!--    <aop:aspectj-autoproxy proxy-target-class="true"/>-->
+    <aop:aspectj-autoproxy/>
+
+
+</beans>

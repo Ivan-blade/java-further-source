@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4ec40c6c-048b-4455-bc62-36032dc185d4" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="$PROJECT_DIR$/../../../../../../software/environment/repository" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../../../../software/environment/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="$PROJECT_DIR$/../../../../../../software/environment/apache-maven-3.6.3/conf/settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1voJnszHCqdpf9h4kgVcd7FoaKW" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.31264368" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RunManager" selected="JUnit.ResumeDaoTest.testFindById">
+    <configuration name="ResumeDaoTest.testFindById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-data-jpa" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ResumeDaoTest" />
+      <option name="METHOD_NAME" value="testFindById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ResumeDaoTest.testFindOne" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-data-jpa" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ResumeDaoTest" />
+      <option name="METHOD_NAME" value="testFindOne" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ResumeDaoTest.testFindById" />
+        <item itemvalue="JUnit.ResumeDaoTest.testFindOne" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4ec40c6c-048b-4455-bc62-36032dc185d4" name="Default Changelist" comment="" />
+      <created>1627222677109</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1627222677109</updated>
+      <workItem from="1627222679217" duration="833000" />
+      <workItem from="1627306766707" duration="388000" />
+      <workItem from="1627307188005" duration="64000" />
+      <workItem from="1627307260163" duration="3000" />
+      <workItem from="1627307300504" duration="250000" />
+      <workItem from="1627307554536" duration="303000" />
+      <workItem from="1627307879516" duration="996000" />
+      <workItem from="1627313329607" duration="2000" />
+      <workItem from="1627314787231" duration="30000" />
+      <workItem from="1627314866567" duration="9000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1628" height="233" key="GridCell.Tab.0.bottom" timestamp="1627313129660">
+      <screen x="0" y="23" width="1680" height="967" />
+    </state>
+    <state width="1628" height="233" key="GridCell.Tab.0.bottom/0.23.1680.967@0.23.1680.967" timestamp="1627313129660" />
+    <state width="1628" height="233" key="GridCell.Tab.0.center" timestamp="1627313129658">
+      <screen x="0" y="23" width="1680" height="967" />
+    </state>
+    <state width="1628" height="233" key="GridCell.Tab.0.center/0.23.1680.967@0.23.1680.967" timestamp="1627313129658" />
+    <state width="1628" height="233" key="GridCell.Tab.0.left" timestamp="1627313129658">
+      <screen x="0" y="23" width="1680" height="967" />
+    </state>
+    <state width="1628" height="233" key="GridCell.Tab.0.left/0.23.1680.967@0.23.1680.967" timestamp="1627313129658" />
+    <state width="1628" height="233" key="GridCell.Tab.0.right" timestamp="1627313129659">
+      <screen x="0" y="23" width="1680" height="967" />
+    </state>
+    <state width="1628" height="233" key="GridCell.Tab.0.right/0.23.1680.967@0.23.1680.967" timestamp="1627313129659" />
+    <state x="239" y="56" key="SettingsEditor" timestamp="1627308157481">
+      <screen x="0" y="23" width="1680" height="967" />
+    </state>
+    <state x="239" y="56" key="SettingsEditor/0.23.1680.967@0.23.1680.967" timestamp="1627308157481" />
+    <state x="340" y="142" key="spring file set editor" timestamp="1627306793217">
+      <screen x="0" y="23" width="1680" height="967" />
+    </state>
+    <state x="340" y="142" key="spring file set editor/0.23.1680.967@0.23.1680.967" timestamp="1627306793217" />
+  </component>
+</project>

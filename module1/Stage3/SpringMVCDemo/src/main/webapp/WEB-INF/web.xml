@@ -1,0 +1,63 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+
+  <!--springmvc提供的针对post请求的编码过滤器-->
+  <filter>
+    <filter-name>encoding</filter-name>
+    <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>UTF-8</param-value>
+    </init-param>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>encoding</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <!--配置springmvc请求方式转换过滤器，会检查请求参数中是否有_method参数，如果有就按照指定的请求方式进行转换-->
+  <filter>
+    <filter-name>hiddenHttpMethodFilter</filter-name>
+    <filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>hiddenHttpMethodFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <servlet>
+    <servlet-name>springmvc</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <!--  contextConfigLocation用于指定配置文件位置  -->
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>classpath:springmvc.xml</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>springmvc</servlet-name>
+    <!--  *.do  拦截所有.do后缀请求  -->
+    <!--  /  不会拦截jsp但是拦截.html等静态资源请求
+          为什么会拦截静态资源——在tomcat当中也有web.xml文件可以看成该文件的父类(target/tomcat/conf/web.xml)
+            父xml中有一个DefaultServlet，urlpattern也是/，用来拦截静态资源文件
+            所以当前xml中的/会重写父类/，所以/配置在父xml中拦截静态资源文件的功能就没有了
+           为什么不拦截jsp？
+            因为父xml中有专门的jspServlet用于拦截jsp文件，而我们没有覆盖那个配置，所以mvc不拦截jsp，jsp处理交给了tomcat
+           如何解决这个问题
+            1、在springmvc.xml中进行静态资源配置<mvc:default-servlet-handler/>
+              添加该标签之后会在mvc上下文中定义一个DefaultServletHttpRequestHandler对象
+              这个对象会对进入DispatcherServlet的url进行检查，如果发现静态资源会把请求转发给web应用服务器（这里是tomcat）进行处理，如果不是，则mvc进行处理
+              局限：静态资源只能放在WEB-INF目录下，不能同级或者其他地方
+            2、springmvc自己处理静态资源
+    -->
+    <!--  /*  拦截所有请求包括jsp  一般不使用，因为请求最后处理完了会跳转jsp或者html资源，如果再次被拦截就无法显示前端资源-->
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+
+</web-app>
